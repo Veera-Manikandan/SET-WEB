@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SET</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ed1b1438a8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <button id="chatbot-logo">💬</button>
+
+
+    <div id="chatbot-container">
+        <div id="chatbot-header">DSU Chatbot</div>
+        <div id="chatbot-body"></div>
+        <div id="chatbot-input">
+            <input type="text" id="user-input" placeholder="Ask something about DSU Trichy...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-selection-alter">
+
+
+            <div class="logo" id="logoBtn">
+                <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1754927597/DSU_Logo_hyzu2q.png" class="nav-image-alter">
+            </div>
+
+            <div class="nav-head-alter">DHANALAKSHMI SRINIVASAN UNIVERSITY</div>
+
+            <div class="nav-menu">
+                <div class="nav-item" onclick="closeSidebars()"><a href="#Home-section" class="span-home-alter"> Home</a></div>
+                <div class="nav-item" onclick="closeSidebars()"><a href="#About-section" class="span-home-alter">About </a></div>
+                <div class="nav-item" onclick="closeSidebars()"><a href="#Department-section" class="span-home-alter">Departments</a></div>
+                <div class="nav-item" onclick="closeSidebars()"><a href="#Feature-section" class="span-home-alter">Features</a></div>
+                <div class="nav-item" onclick="closeSidebars()"><a href="#Connect-section" class="span-home-alter">Connect </a></div>
+            </div>
+        </div>
+        <div class="toggle" id="toggleBtn">☰</div>
+    </nav>
+    <aside class="sidebar sidebar-left" id="sidebarLeft">
+        <ul>
+            <li onclick="closeSidebars()">
+                <img src="https://img.icons8.com/dusk/64/000000/open-book--v2.png" alt="Academic" />
+                <span id="dsu-academics">Academic</span>
+            </li>
+            <li onclick="closeSidebars()">
+                <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756714247/images_rvgtch.png" alt="MOU" />
+                <span id="dsu-mou">MOU</span>
+            </li>
+            <li onclick="closeSidebars()">
+                <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756714253/images-2_qboccw.png" alt="Research" />
+                <span id="dsu-research">Research</span>
+            </li>
+            <li onclick="closeSidebars()">
+                <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756714242/images_gvybof.jpg" alt="Alumni" />
+                <span id="dsu-life">Student Life</span>
+            </li>
+            <li onclick="closeSidebars()">
+                <img src="https://img.icons8.com/color/48/classroom.png" alt="HRDC" />
+                <span id="dsu-place">Placement</span>
+            </li>
+        </ul>
+    </aside>
+    <aside class="sidebar sidebar-right" id="sidebarRight">
+        <ul>
+            <li onclick="closeSidebars()"><a href="#Home-section">
+                    <img src="https://img.icons8.com/color/48/home.png" alt="Home" />
+                    <span class="span-home">Home</span>
+                </a></li>
+            <li onclick="closeSidebars()"><a href="#About-section">
+                    <img src="https://img.icons8.com/color/48/info--v1.png" alt="About Us" />
+                    <span class="span-home">About Us</span>
+                </a></li>
+            <li onclick="closeSidebars()"><a href="#Department-section">
+                    <img src="https://img.icons8.com/color/48/department.png" alt="Departments" />
+                    <span class="span-home">Departments</span>
+                </a></li>
+            <li onclick="closeSidebars()"><a href="#Feature-section">
+                    <img src="https://img.icons8.com/color/48/star--v1.png" alt="Features" />
+                    <span class="span-home">Features</span>
+                </a></li>
+            <li onclick="closeSidebars()"><a href="#Connect-section">
+                    <img src="https://img.icons8.com/color/48/phone.png" alt="Connect Us" />
+                    <span class="span-home">Connect Us</span>
+                </a></li>
+        </ul>
+    </aside>
+    <div id="Home-section" class="content">
+        <section class="stack-scroll-container">
+            <div class="stack-card" style="--bg:transparent;">
+                <section id="video-section">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://res.cloudinary.com/dpkuxu8mr/video/upload/v1757147043/WhatsApp_Video_2025-08-25_at_00.38.16_qhs1rv.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+
+                    <div class="overlay-content">
+                        <h1>Dhanalakshmi Srinivasan University</h1>
+                        <h2>Tiruchirappalli-621 112.Tamil Nadu,India.</h2>
+
+                        <img src="https://res.cloudinary.com/daom3xsqm/image/upload/v1757438998/WhatsApp_Image_2025-09-09_at_22.59.28_14597177_l0nvfk.jpg" class="set-image-alter">
+                        <h3 class="shadow-lg mt-5">SCHOOL OF ENGINEERING AND TECHNOLOGY</h3>
+
+
+                        <section class="circle-card-section">
+                            <div class="circle-card card1">
+                                <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756792786/AICTE-Logo-250x250-1.png_i9ldgb.webp" class="aicte-image-done">
+                            </div>
+                            <div class="circle-card card2">
+                                <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755622572/IIC-LOGO_jkocit.jpg" class="aicte-image-done">
+                            </div>
+                            <div class="circle-card card3">
+                                <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756792652/1ugc_k3ubfi.png" class="aicte-image-done">
+                            </div>
+                        </section>
+
+
+
+                    </div>
+
+                </section>
+            </div>
+            <div id="About-section" class="stack-cardd " style="--bg:#3674B5;">
+                <h1 class="about-head-alter">About us</h1>
+                <p class="about-para-alter">Dhanalakshmi Srinivasan University (DSU) has been established under the Tamil Nadu Private Universities Act, 2019, located in Tiruchirappali, Tamil Nadu, India. Uniqueness of DSU lies in its multi-disciplinary nature in offering a wide range of academic programmes encompassing medicine and engineering.</p>
+                <div class="card-containerr">
+                    <div class="cardd">
+                        <div class="card-innerr">
+                            <div class="card-frontt">
+                                <img src="https://res.cloudinary.com/daom3xsqm/image/upload/v1757437338/WhatsApp_Image_2025-09-09_at_22.31.22_dc927556_iexpsw.jpg" alt="Image 1" class="masters-alter-img">
+                                <h3>Chancellor </h3>
+                            </div>
+                            <div class="card-backk">
+                                <p>Shrinivasan, the esteemed leader of DSU Trichy, embodies a vision of academic excellence and transformative growth.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cardd">
+                        <div class="card-innerr">
+                            <div class="card-frontt">
+                                <img src="https://res.cloudinary.com/daom3xsqm/image/upload/v1757436611/WhatsApp_Image_2025-09-09_at_22.13.48_f8d63c23_itfzvs.jpg" alt="Image 2" class="masters-alter-img">
+                                <h3>Pro Chancellor</h3>
+                            </div>
+                            <div class="card-backk">
+                                <p>Anantha lakshmi is a standout figure in Indian higher education, known for her visionary leadership and global impact</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cardd">
+                        <div class="card-innerr">
+                            <div class="card-frontt">
+                                <img src="https://res.cloudinary.com/daom3xsqm/image/upload/v1757436735/WhatsApp_Image_2025-09-09_at_22.13.49_c3c720bc_rwkkur.jpg" alt="Image 3" class="masters-alter-img">
+                                <h3>Vice Chancellor</h3>
+                            </div>
+                            <div class="card-backk">
+                                <p>Vice Chancellor Air Marshal (Dr) C K Ranjan AVSM VSM (Retd) leads DSU Trichy with distinguished expertise and a legacy of service.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cardd">
+                        <div class="card-innerr">
+                            <div class="card-frontt">
+                                <img src="https://res.cloudinary.com/daom3xsqm/image/upload/v1757437401/WhatsApp_Image_2025-09-09_at_22.31.23_b1cadb1d_xhjwqn.jpg" alt="Image 4" class="masters-alter-img">
+                                <h3>Dean</h3>
+                            </div>
+                            <div class="card-backk">
+                                <p>Dr. V. Sekar, Dean of Planning and Development at DSU Trichy, plays a pivotal role in shaping the university’s strategic growth and academic partnerships.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div>
+                    <section class="cards-containerrr">
+                        <div class="carddd">
+                            <h2><span class="counter" data-target="25">0</span>+</h2>
+                            <p>Years of History</p>
+                        </div>
+                        <div class="carddd">
+                            <h2><span class="counter" data-target="250">0</span>+</h2>
+                            <p>Recruiting Partners</p>
+                        </div>
+                        <div class="carddd">
+                            <h2><span class="counter" data-target="500">0</span>+</h2>
+                            <p>Highly Qualified Faculty</p>
+                        </div>
+                        <div class="carddd">
+                            <h2><span class="counter" data-target="150">0</span>+</h2>
+                            <p>Acres of Lush Green Campus</p>
+                        </div>
+                    </section>
+
+                </div>
+                <div>
+                    <section class="info-section">
+                        <div class="info-card">
+                            <h3>Mission</h3>
+                            <p>
+                                To provide quality education that empowers students with knowledge, skills, and values
+                                necessary to excel in their chosen fields and contribute meaningfully to society.
+                            </p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Vision</h3>
+                            <p>
+                                To be a globally recognized university that fosters innovation, research excellence, and
+                                holistic development of students while maintaining the highest standards of academic integrity.
+                            </p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Academics</h3>
+                            <p>
+                                Our comprehensive academic programs are designed to meet industry demands while encouraging
+                                critical thinking, creativity, and lifelong learning among our students.
+                            </p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Research</h3>
+                            <p>
+                                We promote cutting-edge research across various disciplines, encouraging faculty and students
+                                to explore new frontiers of knowledge and innovation.
+                            </p>
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+
+            <div class="stack-carddd" style="--bg:#FFF9AF;">
+                <div>
+                    <h1 class="about-head-alterr">Our Worldclass Mentors</h1>
+                    <div class="carousel-containerrr">
+                        <div class="carousel-trackkk">
+
+                            <div class="mentor-card"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1757087278/WhatsApp_Image_2025-09-05_at_19.10.23_1_p0a2it.jpg" alt="Mentor"></div>
+                            <div class="mentor-card"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1757087279/WhatsApp_Image_2025-09-05_at_19.05.23_ffhnkx.jpg" alt="Mentor"></div>
+                            <div class="mentor-card"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1757087278/WhatsApp_Image_2025-09-05_at_19.10.22_1_ohreaf.jpg" alt="Mentor"></div>
+                            <div class="mentor-card"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1757087279/WhatsApp_Image_2025-09-05_at_19.10.22_rmppmr.jpg" alt="Mentor"></div>
+                            <div class="mentor-card"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1757087279/WhatsApp_Image_2025-09-05_at_19.10.23_kirnpa.jpg" alt="Mentor"></div>
+                            <div class="mentor-card"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1757087280/WhatsApp_Image_2025-09-05_at_19.10.24_1_galubf.jpg" alt="Mentor"></div>
+                            <div class="mentor-card"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1757087280/WhatsApp_Image_2025-09-05_at_19.10.21_1_e6sbk5.jpg" alt="Mentor"></div>
+
+
+                            <div class="mentor-card"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1757087280/WhatsApp_Image_2025-09-05_at_19.10.24_wlmgkz.jpg" alt="Mentor"></div>
+                            <div class="mentor-card"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1757087280/WhatsApp_Image_2025-09-05_at_19.05.32_yquufg.jpg" alt="Mentor"></div>
+                            <div class="mentor-card"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1757087280/WhatsApp_Image_2025-09-05_at_19.10.25_1_b5youe.jpg" alt="Mentor"></div>
+                            <div class="mentor-card"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1757087281/WhatsApp_Image_2025-09-05_at_19.10.24_2_xuornd.jpg" alt="Mentor"></div>
+                            <div class="mentor-card"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1757087281/WhatsApp_Image_2025-09-05_at_19.10.25_p314uu.jpg" alt="Mentor"></div>
+                            <div class="mentor-card"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1757087281/WhatsApp_Image_2025-09-05_at_19.10.26_tph4ao.jpg" alt="Mentor"></div>
+                            <div class="mentor-card"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1757087278/WhatsApp_Image_2025-09-05_at_19.10.21_jmdb8b.jpg" alt="Mentor"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <main class="wrap">
+
+
+                        <section class="grid">
+
+                            <article class="card reveal shadow-lg" style="--i: 0" tabindex="0" aria-label="Campus Tour information card">
+                                <header class="card-header shadow-lg">
+                                    <div class="card-icon">C</div>
+                                    <h2 class="card-title">Campus Tour</h2>
+                                </header>
+                                <div class="card-body">
+                                    <p>Dhanalakshmi Srinivasan University (DSU), located in Samayapuram near Tiruchirappalli (Trichy), Tamil Nadu, is a premier private university established under the Tamil Nadu Private Universities Act, 2019. Lush greenery with 8500+ flowering plants, creating a serene and vibrant atmosphere.</p>
+                                    <video autoplay muted loop class="video-alter-campus" style="transform:rotate(0deg); transform-origin: center;">
+                                        <source src="https://res.cloudinary.com/daom3xsqm/video/upload/v1757438391/Dhanalakshmi_Srinivasan_University_Samayapuram_droneshots_dsu_dsuniversity_ykgd4a.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video.
+                                    </video>
+                                </div>
+                            </article>
+
+                            <article class="card reveal shadow-lg" style="--i: 1" tabindex="0" aria-label="Library resources information card">
+                                <header class="card-header shadow-lg">
+                                    <div class="card-icon">L</div>
+                                    <h2 class="card-title">Library & Resources</h2>
+                                </header>
+                                <div class="card-body">
+                                    <p>The library at Dhanalakshmi Srinivasan University (DSU), Trichy campus, is a centrally air-conditioned, fully computerized facility designed to support academic excellence and research. It houses an impressive collection of over 52,000 volumes across various disciplines, including many rare and invaluable titles.</p>
+                                    <video autoplay muted loop class="video-alter-campus" style="transform:rotate(0deg); transform-origin: center;">
+                                        <source src="https://res.cloudinary.com/dpkuxu8mr/video/upload/v1756822530/whatsapp-image-2025-08-07-at-205517_TUJzt7eM_leivqc.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video.
+                                    </video>
+                                </div>
+                            </article>
+                        </section>
+                    </main>
+                </div>
+                <div id="laboratory-margin-alter">
+                    <main class="wrap">
+
+
+                        <section class="grid">
+
+                            <article class="card reveal shadow-lg" style="--i: 0" tabindex="0" aria-label="Campus Tour information card">
+                                <header class="card-header shadow-lg">
+                                    <div class="card-icon">L</div>
+                                    <h2 class="card-title">laboratories</h2>
+                                </header>
+                                <div class="card-body">
+                                    <p>At DSU, innovation thrives through our state-of-the-art departmental laboratories—each designed as a dynamic zone of exploration and excellence. From the Coding Zone, where future developers craft intelligent solutions, to the AI Zone, where students engineer smart systems using cutting-edge machine learning tools, and the Cyber Zone. </p>
+                                    <video autoplay muted loop class="video-alter-campus" style="transform:rotate(0deg); transform-origin: center;">
+                                        <source src="https://res.cloudinary.com/dpkuxu8mr/video/upload/v1756824189/whatsapp-image-2025-08-11-at-135101-1_EIriaBmt_djhyrk.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video.
+                                    </video>
+                                </div>
+                            </article>
+
+                            <article class="card reveal shadow-lg" style="--i: 1" tabindex="0" aria-label="Library resources information card">
+                                <header class="card-header shadow-lg">
+                                    <div class="card-icon">M</div>
+                                    <h2 class="card-title">Modren Classroom</h2>
+                                </header>
+                                <div class="card-body">
+                                    <p>Seminar halls, IT centres, and lecture theatres complement the classrooms for specialized academic sessions such as air-conditioned rooms, food courts, and hostels—create a balanced and supportive environment for students</p>
+                                    <video autoplay muted loop class="video-alter-campus" style="transform:rotate(0deg); transform-origin: center;">
+                                        <source src="https://res.cloudinary.com/dpkuxu8mr/video/upload/v1756970063/WhatsApp_Video_2025-09-03_at_19.57.06_qzcnjb.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video.
+                                    </video>
+                                </div>
+                            </article>
+                        </section>
+                    </main>
+                </div>
+
+
+            </div>
+            <div id="Department-section" class="stack-cardd" style="--bg:#ECFAE5;">
+                <h1 class="about-head-alterr">Our Departments</h1>
+                <div class="flex-containervsac">
+
+                    <div class="cardvsac">
+                        <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756977815/images-2_xhonzr.jpg" alt="Dept 1">
+                        <h4 class="depat-head-akter">Artificial Intelligence And Data Science</h4>
+                        <div class="overlayvsac">
+                            <h3>AI & DS</h3>
+                            <div class="optionsvsac">
+                                <button id="overview-aids">Overview</button>
+                                <button id="aids-sylabus">Syllabus</button>
+                                <button id="aids-event">Events</button>
+                                <button id="aids-faculty">Faculty</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cardvsac">
+                        <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756990376/Machine-Learning-Basics_qubfyd.jpg" alt="Dept 1">
+                        <h4 class="depat-head-akter">Artificial Intelligence And Machine Learning</h4>
+                        <div class="overlayvsac">
+                            <h3>AI & ML</h3>
+                            <div class="optionsvsac">
+                                <button id="overview-aiml">Overview</button>
+                                <button id="aiml-sylabus">Syllabus</button>
+                                <button id="aiml-event">Events</button>
+                                <button id="aiml-faculty">Faculty</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cardvsac">
+                        <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756990235/images-3_sfdfmf.jpg" alt="Dept 1">
+                        <h4 class="depat-head-akter">Cyber Security</h4>
+                        <div class="overlayvsac">
+                            <h3>CYBER</h3>
+                            <div class="optionsvsac">
+                                <button id="overview-cys">Overview</button>
+                                <button id="cys-sylabus">Syllabus</button>
+                                <button id="cys-event">Events</button>
+                                <button id="cys-faculty">Faculty</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cardvsac">
+                        <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756990236/images-4_w2iroq.jpg" alt="Dept 1">
+                        <h4 class="depat-head-akter">Information Technology</h4>
+                        <div class="overlayvsac">
+                            <h3>IT</h3>
+                            <div class="optionsvsac">
+                                <button id="overview-it">Overview</button>
+                                <button id="it-sylabus">Syllabus</button>
+                                <button id="it-event">Events</button>
+                                <button id="it-faculty">Faculty</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cardvsac">
+                        <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756990236/images-5_lmnqq9.jpg" alt="Dept 1">
+                        <h4 class="depat-head-akter">Computer Science Engineering</h4>
+                        <div class="overlayvsac">
+                            <h3>CSE</h3>
+                            <div class="optionsvsac">
+                                <button id="overview-cse">Overview</button>
+                                <button id="cse-sylabus">Syllabus</button>
+                                <button id="cse-event">Events</button>
+                                <button id="cse-faculty">Faculty</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="cardvsac">
+                        <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756990237/images-6_yhmvqz.jpg" alt="Dept 1">
+                        <h4 class="depat-head-akter">Internet of Things</h4>
+                        <div class="overlayvsac">
+                            <h3>IOT</h3>
+                            <div class="optionsvsac">
+                                <button id="overview-iot">Overview</button>
+                                <button id="iot-sylabus">Syllabus</button>
+                                <button id="iot-event">Events</button>
+                                <button id="iot-faculty">Faculty</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="cardvsac">
+                        <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756990243/images-7_czxjg7.jpg" alt="Dept 1">
+                        <h4 class="depat-head-akter">Agricultural Engineering</h4>
+                        <div class="overlayvsac">
+                            <h3>AGRI</h3>
+                            <div class="optionsvsac">
+                                <button id="overview-agri">Overview</button>
+                                <button id="agri-sylabus">Syllabus</button>
+                                <button>Events</button>
+                                <button>Faculty</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cardvsac">
+                        <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756990236/images-8_tukbjv.jpg" alt="Dept 1">
+                        <h4 class="depat-head-akter">Biomedical Engineering</h4>
+                        <div class="overlayvsac">
+                            <h3>BIOMEDICAL</h3>
+                            <div class="optionsvsac">
+                                <button id="overview-biomed">Overview</button>
+                                <button id="biomed-sylabus">Syllabus</button>
+                                <button id="biomed-event">Events</button>
+                                <button id="biomed-faculty">Faculty</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cardvsac">
+                        <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756990236/images-9_qk3odd.jpg" alt="Dept 1">
+                        <h4 class="depat-head-akter">BioTechnology Engineering</h4>
+                        <div class="overlayvsac">
+                            <h3>BIOTECH</h3>
+                            <div class="optionsvsac">
+                                <button id="overview-biotech">Overview</button>
+                                <button id="biotech-sylabus">Syllabus</button>
+                                <button id="biotech-event">Events</button>
+                                <button id="biotech-faculty">Faculty</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cardvsac">
+                        <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756990236/images-10_zzu1gh.jpg" alt="Dept 1">
+                        <h4 class="depat-head-akter">Electronic Communication Engineering</h4>
+                        <div class="overlayvsac">
+                            <h3>ECE</h3>
+                            <div class="optionsvsac">
+                                <button id="overview-ece">Overview</button>
+                                <button id="ece-sylabus">Syllabus</button>
+                                <button>Events</button>
+                                <button id="ece-faculty">Faculty</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="cardvsac">
+                        <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756990237/images-11_ukcsgb.jpg" alt="Dept 1">
+                        <h4 class="depat-head-akter">Electrical Electronic Engineering</h4>
+                        <div class="overlayvsac">
+                            <h3>EEE</h3>
+                            <div class="optionsvsac">
+                                <button id="overview-eee">Overview</button>
+                                <button id="eee-sylabus">Syllabus</button>
+                                <button>Events</button>
+                                <button id="eee-faculty">Faculty</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="cardvsac">
+                        <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1756990298/images-12_vylx2e.jpg" alt="Dept 1">
+                        <h4 class="depat-head-akter">Mechanical Engineering</h4>
+                        <div class="overlayvsac">
+                            <h3>MECH</h3>
+                            <div class="optionsvsac">
+                                <button id="overview-mech">Overview</button>
+                                <button id="mech-sylabus">Syllabus</button>
+                                <button id="mech-event">Events</button>
+                                <button id="mech-faculty">Faculty</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div id="Feature-section" class="stack-cardsai" style="--bg:#f9ebea;">
+                <h1 class="about-head-alterr">Features</h1>
+                <p class="about-para-alter" style="color:black;">It enhances the user experience by offering students, faculty, and staff a centralized space to manage their academic and administrative tasks. For students, it can serve as a personal planner where they can track assignments, exam dates, project deadlines, and campus events—all in one place. Faculty members can use it to organize lecture schedules, grading responsibilities, and meetings.</p>
+                <div class="containervs">
+                    <h2>📋 Task Manager</h2>
+                    <div class="stats">
+                        <div class="stat">Total: <span id="total">0</span></div>
+                        <div class="stat">Completed: <span id="completed">0</span></div>
+                        <div class="stat">Remaining: <span id="remaining">0</span></div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="taskInput" placeholder="Add new task..." />
+                        <button onclick="addTask()">+ Add Task</button>
+                    </div>
+                    <ul id="taskList">
+                        <li id="emptyMessage">No tasks yet</li>
+                    </ul>
+                </div>
+                <h1 class="about-head-alterr">Talk To Our Career Expert</h1>
+                <p class="about-para-alter" style="color:black;">We believe that every student deserves a clear, confident path to success. Our Career Guidance Cell is designed to bridge the gap between academic learning and industry expectations.</p>
+                <div class="tce-alter">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUahEJXozi313F3_BhJsecVgmwpr31MXeVQUWGamCnIBpD7A/viewform?usp=dialog"><button class="golden-button"> Request a Callback</button></a>
+                </div>
+            </div>
+            <div id="Connect-section" class="stack-cardsai" style="--bg:darkblue;">
+                <h1 class="about-head-alterr" style="color:white;">Placement Recruiters</h1>
+                <div class="carousel-containersai">
+                    <div class="carousel-tracksai">
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755359875/lc1_pmkslm.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360018/lc2_jrc5u8.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360220/lc6_a6ogju.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360152/lc3_y34rsk.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360153/lc4_a1ffbg.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360153/lc5_sqqxoo.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360221/lc8_w5aqtl.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360221/lc9_eahgh1.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360221/lc7_zlt2w2.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360221/lc10_bjrkvf.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360406/lc12_ygy9eu.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360407/lc15_divc1j.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360407/lc13_jblhwx.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360407/lc14_bviqxa.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360407/lc37_uvady9.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360988/lc36_bntj8g.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360018/lc2_jrc5u8.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360991/lc38_myr38y.jpg"></div>
+                    </div>
+                </div>
+
+                <div class="carousel-containersai">
+                    <div class="carousel-tracksai reverse">
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360779/lc16_gqpnou.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360791/lc17_wcvw5y.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360793/lc18_p4vkgk.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360792/lc22_vehys1.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360793/lc20_her6r7.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360793/lc21_gesnxs.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360794/lc23_xtt9vj.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360794/lc24_fqgjwp.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360797/lc25_oklwum.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360797/lc26_as01kn.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360797/lc27_kcdxa1.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360986/lc28_ehmwpo.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360986/lc30_f5k2jb.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360987/lc31_xya6r1.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360987/lc32_fxylws.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360987/lc35_tbu4po.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360987/lc33_cdq7h2.jpg"></div>
+                        <div class="carousel-itemsai"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1755360987/lc34_sod3cc.jpg"></div>
+                    </div>
+                    <div class="footer-modern">
+                        <div class="ft-or1 mt-5">
+                            <h1 id="about-head-alterr" style="color:white;">Contact us</h1>
+                            <div class="Contact-alter mt-4">
+                                <div class="Contact-img">
+                                    <a href="https://x.com/DSUTRY_OFFICIAL"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1729182809/61f400cc41af69932df92c8a_twitterimage_qpul56.svg" class="con-img-alter"></a>
+                                </div>
+                                <div class="Contact-img">
+                                    <a href="https://youtube.com/@dsu-trichy-campus?si=gZi-oRnix5KQguHF"><img src="https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/62384993d97ad72405dee8d2_Frame%2031%20(1).svg" class="con-img-alter"></a>
+                                </div>
+                                <div class="Contact-img">
+                                    <a href="https://www.linkedin.com/school/dhanalakshmisrinivasanuniversity/"> <img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1729182842/61f3fe1a40dc31c249e1ab99_linkedin-icon_zfu1yh.svg" class="con-img-alter"></a>
+                                </div>
+                                <div class="Contact-img">
+                                    <a href="https://www.instagram.com/dsu_trichy?igsh=dWZlZTFheDYxNWhl"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1729182802/61f3fe609dc6ce25f2f7078f_instgram-icon_htxlbp.svg" class="con-img-alter"></a>
+                                </div>
+                                <div class="Contact-img">
+                                    <a href="https://www.facebook.com/profile.php?id=100091800559494&mibextid=ZbWKwL"><img src="https://res.cloudinary.com/dpkuxu8mr/image/upload/v1729182774/61f3fd520d11331f5f3b46ef_facebook-icon_w7vz0v.svg" class="con-img-alter"></a>
+                                </div>
+
+                            </div>
+                            <div class="contact-deatil-alter mt-5">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p class="con-p-alter"> NH-45, Trichy Chennai Trunk Road,<br>
+                                    Samayapuram (Near Samayapuram Toll Plaza),<br>
+                                    Tiruchirappalli - 621 112.<br>
+                                    Tamil Nadu,
+                                    India.</p>
+                            </div>
+                            <div class="contact-deatil-alter mt-1">
+                                <i class="fa-solid fa-phone"></i>
+                                <p class="con-p-alter"> Toll Free Number: 1800-5322-222 </p>
+
+                            </div>
+                            <div class="contact-deatil-alter mt-1">
+                                <i class="fa-solid fa-mobile"></i>
+                                <p class="con-p-alter"> +91 63841 76766 | +91 63841 76769</p>
+
+                            </div>
+                            <div class="contact-deatil-alter mt-1">
+                                <i class="fa-solid fa-envelope"></i>
+                                <p class="con-p-alter">enquiry@dsuniversity.ac.in</p>
+
+                            </div>
+                            <div class="contact-deatil-alter mt-1">
+                                <i class="fa-solid fa-earth-americas"></i>
+                                <p class="con-p-alter">www.dsuniversity.ac.in</p>
+
+                            </div>
+                        </div>
+                        <div class="ft-or2 mt-5">
+                            <h1 id="about-head-alterr" style="color:white;">Our Location</h1>
+                            <div class="Contact-map mt-2">
+
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.438257274825!2d78.7439158753806!3d10.930229856337238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf70ca2847e99%3A0xcf6f7bb049ba92a6!2sDHANALAKSHMI%20SRINIVASAN%20UNIVERSITY!5e0!3m2!1sen!2sin!4v1755595419718!5m2!1sen!2sin" class="google-map" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+
+
+</body>
+
+</html>
